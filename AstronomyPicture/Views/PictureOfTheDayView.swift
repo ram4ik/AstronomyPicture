@@ -47,7 +47,12 @@ struct PictureOfTheDayView: View {
                     Text(manager.photoInfo.description)
                 }
             }.padding()
-        }
+        }.gesture(
+            DragGesture(minimumDistance: 50)
+                .onEnded({ _ in
+                    self.manager.date = Calendar.current.date(byAdding: .day, value: -1, to: self.manager.date) ?? self.manager.date
+                })
+        )
     }
 }
 
