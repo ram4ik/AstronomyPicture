@@ -12,7 +12,11 @@ struct PictureOfTheDayView: View {
     @ObservedObject var manager = NetworkManager()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(manager.photoInfo.title)
+            Text(manager.photoInfo.date)
+            Text(manager.photoInfo.description)
+        }
     }
 }
 
