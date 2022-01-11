@@ -11,13 +11,31 @@ struct PictureOfTheDayView: View {
     
     @ObservedObject var manager = NetworkManager()
     
+    @State private var showSwitchDate: Bool = false
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .center, spacing: 20) {
+            
+            Button {
+                showSwitchDate.toggle()
+            } label: {
+                Image(systemName: "calendar")
+                Text("Switch day")
+            }
+            .padding(.trailing)
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            .popover(isPresented: $showSwitchDate) {
+                SelectDateView(manager: self.manager)
+            }
+
             
             if manager.image != nil {
                 Image(uiImage: self.manager.image!)
                     .resizable()
                     .scaledToFit()
+            } else {
+                ProgressView()
+                    .padding(100)
             }
             
             ScrollView {

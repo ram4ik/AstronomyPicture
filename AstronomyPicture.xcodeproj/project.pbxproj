@@ -16,6 +16,7 @@
 		95104806278DD9E100B55B38 /* UrlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95104805278DD9E100B55B38 /* UrlHelper.swift */; };
 		95104808278DE1DB00B55B38 /* PictureOfTheDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95104807278DE1DB00B55B38 /* PictureOfTheDayView.swift */; };
 		9510480A278DE2DA00B55B38 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95104809278DE2DA00B55B38 /* PhotoInfo.swift */; };
+		9510480C278DF02200B55B38 /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510480B278DF02200B55B38 /* SelectDateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		95104805278DD9E100B55B38 /* UrlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlHelper.swift; sourceTree = "<group>"; };
 		95104807278DE1DB00B55B38 /* PictureOfTheDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayView.swift; sourceTree = "<group>"; };
 		95104809278DE2DA00B55B38 /* PhotoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
+		9510480B278DF02200B55B38 /* SelectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				95104807278DE1DB00B55B38 /* PictureOfTheDayView.swift */,
+				9510480B278DF02200B55B38 /* SelectDateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9510480C278DF02200B55B38 /* SelectDateView.swift in Sources */,
 				9510480A278DE2DA00B55B38 /* PhotoInfo.swift in Sources */,
 				95104802278DD84300B55B38 /* NetworkManager.swift in Sources */,
 				95104806278DD9E100B55B38 /* UrlHelper.swift in Sources */,
