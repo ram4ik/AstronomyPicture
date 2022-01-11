@@ -12,16 +12,34 @@ struct PictureOfTheDayView: View {
     @ObservedObject var manager = NetworkManager()
     
     var body: some View {
-        VStack {
-            Text(manager.photoInfo.title)
-            Text(manager.photoInfo.date)
-            Text(manager.photoInfo.description)
+        VStack(alignment: .leading, spacing: 20) {
+            
+            if manager.image != nil {
+                Image(uiImage: self.manager.image!)
+                    .resizable()
+                    .scaledToFit()
+            }
+            
+            ScrollView {
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(manager.photoInfo.title)
+                        .font(.title)
+                    Text(manager.photoInfo.date)
+                        .font(.headline)
+                    Text(manager.photoInfo.description)
+                }
+            }.padding()
         }
     }
 }
 
 struct PictureOfTheDayView_Previews: PreviewProvider {
     static var previews: some View {
-        PictureOfTheDayView()
+        
+        let view = PictureOfTheDayView()
+        view.manager.photoInfo = PhotoInfo.createDefault()
+        view.manager.image = UIImage(named: "preview_image")
+        
+        return view
     }
 }
